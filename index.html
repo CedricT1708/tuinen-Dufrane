@@ -90,7 +90,7 @@
         </div>
     </section>
 
-        <!-- Contact & Bedrijfsgegevens -->
+            <!-- Contact & Bedrijfsgegevens -->
     <section id="contact" class="contact-section">
         <div class="contact-container">
             <div class="contact-info">
@@ -119,22 +119,24 @@
             </div>
 
             <div class="contact-form-container">
-                <!-- Het formulier heeft geen action of method meer, JavaScript regelt dit nu veilig lokaal -->
-                <form id="form" class="contact-form">
+                <!-- Standaard HTML verzending via Web3Forms (Werkt gegarandeerd op GitHub Pages) -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
                     
                     <!-- Jouw unieke Web3Forms Access Key -->
                     <input type="hidden" name="access_key" value="a75ed72e-c9ff-463a-90ba-5472a7d2b212">
+                    
+                    <!-- Onderwerp van de e-mail -->
                     <input type="hidden" name="subject" value="Nieuwe aanvraag via Tuinen Dufrane website">
+                    
+                    <!-- Naam van je bedrijf bovenin de e-mail -->
+                    <input type="hidden" name="from_name" value="Tuinen Dufrane Website">
 
                     <input type="text" name="name" placeholder="Uw Naam" required>
                     <input type="email" name="email" placeholder="Uw E-mailadres" required>
                     <input type="tel" name="phone" placeholder="Uw Telefoonnummer">
                     <textarea name="message" placeholder="Beschrijf uw tuinwensen..." rows="5" required></textarea>
                     
-                    <button type="submit" id="submit-btn" class="btn-primary">Verzend Aanvraag</button>
-                    
-                    <!-- Resultaat melding -->
-                    <div id="result" style="margin-top: 15px; font-weight: 600; text-align: center;"></div>
+                    <button type="submit" class="btn-primary">Verzend Aanvraag</button>
                 </form>
             </div>
         </div>
@@ -145,57 +147,6 @@
         <p>&copy; 2026 Tuinen Dufrane. Alle rechten voorbehouden. Design met pure luxe.</p>
     </footer>
 
-    <!-- GEAVANCEERDE AJAX METHODE (OMZEILT 405 BLOKKADE LOKAAL) -->
-    <script>
-    const form = document.getElementById('form');
-    const result = document.getElementById('result');
-    const submitBtn = document.getElementById('submit-btn');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      submitBtn.innerText = "Verzenden...";
-      submitBtn.disabled = true;
-      
-      const formData = new FormData(form);
-      const object = Object.fromEntries(formData);
-      const json = JSON.stringify(object);
-
-      result.style.color = "#c5a880";
-      result.innerText = "Formulier wordt verwerkt...";
-
-      fetch('https://web3forms.com', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-            .then(async (response) => {
-                let jsonResponse = await response.json();
-                if (response.status == 200) {
-                    result.style.color = "#1b3322"; // Luxe groen
-                    result.innerText = "✨ Uw bericht is succesvol verzonden!";
-                    form.reset();
-                } else {
-                    result.style.color = "#990000";
-                    result.innerText = "Fout: " + jsonResponse.message;
-                }
-            })
-            .catch(error => {
-                result.style.color = "#990000";
-                result.innerText = "Er is een netwerkfout opgetreden. Probeer het opnieuw.";
-            })
-            .then(function() {
-                submitBtn.innerText = "Verzend Aanvraag";
-                submitBtn.disabled = false;
-                setTimeout(() => {
-                    result.innerText = "";
-                }, 6000);
-            });
-    });
-    </script>
 
 </body>
 </html>
