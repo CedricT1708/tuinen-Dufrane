@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuinen Dufrane | Exclusieve Tuinen & Landschappen</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts voor een luxe uitstraling -->
+    <link href="https://googleapis.com" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Luxe Navigatiebalk -->
+    <header class="navbar">
+        <div class="logo">Tuinen <span>Dufrane</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero / Intro Sectie met achtergrond -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="subtitle">Vakmanschap & Kwaliteit</span>
+            <h1>Creatie van uw <br><span>droomtuin</span></h1>
+            <p>Levert kwalitatief en professioneel werk. Zeker een aanrader voor het perfecte groenonderhoud en exclusieve tuinaanleg.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Vraag een offerte aan</a>
+                <a href="#portfolio" class="btn-secondary">Bekijk ons werk</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Korte Statistieken / Kenmerken -->
+    <section class="features">
+        <div class="feature-card">
+            <h3>5.0 ★</h3>
+            <p>Topbeoordeeld vakmanschap</p>
+        </div>
+        <div class="feature-card">
+            <h3>100%</h3>
+            <p>Maatwerk & Professioneel</p>
+        </div>
+        <div class="feature-card">
+            <h3>Luxe</h3>
+            <p>Tuinaanleg & Onderhoud</p>
+        </div>
+    </section>
+
+    <!-- Luxe Fotogalerij / Portfolio met uw eigen beelden -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-title">
+            <span>Onze Realisaties</span>
+            <h2>Exclusief Portfolio</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="grid-container-3">
+            <!-- Foto 1: Heggenknippen -->
+            <div class="grid-item">
+                <img src="beelden/hegeknippen.png" alt="Heggenknippen Tuinen Dufrane">
+                <div class="project-overlay">
+                    <h4>Precisie Heggenknippen</h4>
+                    <p>Professioneel vormbehoud en strakke hagen</p>
+                </div>
+            </div>
+            
+            <!-- Foto 2: Gazon onderhoud -->
+            <div class="grid-item">
+                <img src="beelden/gazon.png" alt="Perfect Gazon Tuinen Dufrane">
+                <div class="project-overlay">
+                    <h4>Exclusief Gazononderhoud</h4>
+                    <p>Perfect groen, strak en gezond</p>
+                </div>
+            </div>
+            
+            <!-- Foto 3: Verticuteren / Gras loshalen -->
+            <div class="grid-item">
+                <img src="beelden/machine%20voor%20gras%20los%20te%20halen.png" alt="Verticuteren en gazonrenovatie">
+                <div class="project-overlay">
+                    <h4>Gazonrenovatie & Verticuteren</h4>
+                    <p>Grondige aanpak voor een vitale grasmat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Contact & Bedrijfsgegevens -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <span>Contact</span>
+                <h2>Samenwerken aan uw project?</h2>
+                <p>Neem vandaag nog contact met ons op voor een vrijblijvend adviesgesprek of offerte.</p>
+                
+                <div class="info-details">
+                    <div class="info-item">
+                        <strong>📍 Adres:</strong>
+                        <p>Kieldrechtsebaan 90, 9130 Verrebroek</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>📞 Telefoon:</strong>
+                        <p><a href="tel:0468478465">0468 47 84 65</a></p>
+                    </div>
+                    <div class="info-item">
+                        <strong>✉️ E-mail:</strong>
+                        <p><a href="mailto:maxim.dufrane@gmail.com">maxim.dufrane@gmail.com</a></p>
+                    </div>
+                    <div class="info-item">
+                        <strong>⭐ Beoordeling:</strong>
+                        <p>5,0 van de 5 sterren op Google Maps</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <!-- Het formulier heeft geen action of method meer, JavaScript regelt dit nu veilig lokaal -->
+                <form id="form" class="contact-form">
+                    
+                    <!-- Jouw unieke Web3Forms Access Key -->
+                    <input type="hidden" name="access_key" value="a75ed72e-c9ff-463a-90ba-5472a7d2b212">
+                    <input type="hidden" name="subject" value="Nieuwe aanvraag via Tuinen Dufrane website">
+
+                    <input type="text" name="name" placeholder="Uw Naam" required>
+                    <input type="email" name="email" placeholder="Uw E-mailadres" required>
+                    <input type="tel" name="phone" placeholder="Uw Telefoonnummer">
+                    <textarea name="message" placeholder="Beschrijf uw tuinwensen..." rows="5" required></textarea>
+                    
+                    <button type="submit" id="submit-btn" class="btn-primary">Verzend Aanvraag</button>
+                    
+                    <!-- Resultaat melding -->
+                    <div id="result" style="margin-top: 15px; font-weight: 600; text-align: center;"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Tuinen Dufrane. Alle rechten voorbehouden. Design met pure luxe.</p>
+    </footer>
+
+    <!-- GEAVANCEERDE AJAX METHODE (OMZEILT 405 BLOKKADE LOKAAL) -->
+    <script>
+    const form = document.getElementById('form');
+    const result = document.getElementById('result');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      submitBtn.innerText = "Verzenden...";
+      submitBtn.disabled = true;
+      
+      const formData = new FormData(form);
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      result.style.color = "#c5a880";
+      result.innerText = "Formulier wordt verwerkt...";
+
+      fetch('https://web3forms.com', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let jsonResponse = await response.json();
+                if (response.status == 200) {
+                    result.style.color = "#1b3322"; // Luxe groen
+                    result.innerText = "✨ Uw bericht is succesvol verzonden!";
+                    form.reset();
+                } else {
+                    result.style.color = "#990000";
+                    result.innerText = "Fout: " + jsonResponse.message;
+                }
+            })
+            .catch(error => {
+                result.style.color = "#990000";
+                result.innerText = "Er is een netwerkfout opgetreden. Probeer het opnieuw.";
+            })
+            .then(function() {
+                submitBtn.innerText = "Verzend Aanvraag";
+                submitBtn.disabled = false;
+                setTimeout(() => {
+                    result.innerText = "";
+                }, 6000);
+            });
+    });
+    </script>
+
+</body>
+</html>
